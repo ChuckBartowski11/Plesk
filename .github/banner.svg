@@ -31,8 +31,8 @@
   </g>
 
   <g font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
-    <text x="76" y="118" font-size="64" font-weight="800" fill="#ffffff" letter-spacing="-1">Plesk SDK</text>
-    <text x="76" y="166" font-size="30" font-weight="500" fill="#d3f1fc">for PHP — REST API v2 + CLI bridge</text>
+    <text x="76" y="118" font-size="64" font-weight="800" fill="#ffffff" letter-spacing="-1">Plesk SDK PHP</text>
+    <text x="76" y="166" font-size="30" font-weight="500" fill="#d3f1fc">REST API v2 + CLI bridge</text>
   </g>
 
   <rect x="78" y="188" width="220" height="6" rx="3" fill="url(#accent)"/>
