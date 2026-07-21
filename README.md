@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src=".github/banner.svg" alt="Plesk SDK for PHP" width="100%">
+<img src=".github/banner.svg?v=2" alt="Plesk SDK for PHP" width="100%">
 
 # 🌐 Plesk SDK for PHP
 
