@@ -1,8 +1,31 @@
-# Plesk SDK for PHP
+<div align="center">
 
-A modern, fully typed PHP SDK for the **Plesk REST API (v2)**, with a built-in **CLI bridge** for everything the REST surface does not cover (mail accounts, suspensions, service management…).
+<img src=".github/banner.svg" alt="Plesk SDK for PHP" width="100%">
 
-Framework-agnostic core — usable from any PHP project, script, or worker — with an optional bundle for first-class Symfony integration. Authenticated with API keys or basic credentials, typed exceptions, and a comment-free, strictly typed codebase (PHP 8.2+, `declare(strict_types=1)` everywhere).
+# 🌐 Plesk SDK for PHP
+
+**A modern, fully typed PHP SDK for the Plesk REST API (v2), with a built-in CLI bridge.**
+
+[![PHP Version](https://img.shields.io/badge/PHP-%3E%3D%208.2-777BB4?logo=php&logoColor=white)](https://www.php.net/)
+[![Symfony](https://img.shields.io/badge/Symfony-6.4%20%7C%207.x-000000?logo=symfony&logoColor=white)](https://symfony.com/)
+[![Tests](https://img.shields.io/badge/tests-16%20passing-brightgreen?logo=github)](tests/)
+[![License](https://img.shields.io/badge/license-MIT-yellow)](LICENSE)
+
+*Domains · Customers · Mail · DNS · Databases · FTP · Extensions · API keys · CLI bridge*
+
+[Installation](#installation) · [Quick Start](#quick-start-plain-php) · [API Reference](#api-reference) · [Error Handling](#error-handling)
+
+</div>
+
+---
+
+```php
+$plesk->domains()->create('example.com', ['hosting_type' => 'virtual']);
+$plesk->mail()->create('contact@example.com', 'S3cure!Pass');
+$plesk->cli()->call('subscription', ['--info', 'example.com']);
+```
+
+The CLI bridge makes every `plesk bin` utility callable over HTTPS — the SDK uses it transparently where REST has gaps (mailboxes, suspensions, services). Framework-agnostic core with an optional Symfony bundle, API-key or basic auth, typed exceptions, comment-free strictly typed codebase (PHP 8.2+).
 
 ---
 
