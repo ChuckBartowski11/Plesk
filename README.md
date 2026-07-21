@@ -9,6 +9,7 @@
 [![PHP Version](https://img.shields.io/badge/PHP-%3E%3D%208.2-777BB4?logo=php&logoColor=white)](https://www.php.net/)
 [![Symfony](https://img.shields.io/badge/Symfony-6.4%20%7C%207.x-000000?logo=symfony&logoColor=white)](https://symfony.com/)
 [![Tests](https://img.shields.io/badge/tests-16%20passing-brightgreen?logo=github)](tests/)
+[![Packagist](https://img.shields.io/packagist/v/chuckbartowski/plesk-sdk?label=packagist&color=f28d1a)](https://packagist.org/packages/chuckbartowski/plesk-sdk)
 [![License](https://img.shields.io/badge/license-MIT-yellow)](LICENSE)
 
 *Domains · Customers · Mail · DNS · Databases · FTP · Extensions · API keys · CLI bridge*
@@ -78,29 +79,10 @@ The CLI bridge makes every `plesk bin` utility callable over HTTPS — the SDK u
 
 ## Installation
 
-If the package is available on [Packagist](https://packagist.org/packages/chuckbartowski/plesk-sdk):
+The package is published on [Packagist](https://packagist.org/packages/chuckbartowski/plesk-sdk):
 
 ```bash
 composer require chuckbartowski/plesk-sdk
-```
-
-Otherwise, install it straight from the Git repository — add it as a VCS source in your project's `composer.json`:
-
-```json
-{
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/ChuckBartowski11/Plesk"
-        }
-    ]
-}
-```
-
-Then require it:
-
-```bash
-composer require chuckbartowski/plesk-sdk:^1.0
 ```
 
 ## Quick Start (plain PHP)
