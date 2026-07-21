@@ -55,7 +55,13 @@ Framework-agnostic core — usable from any PHP project, script, or worker — w
 
 ## Installation
 
-The package is not published on Packagist yet — install it straight from the Git repository. Add the repository to your project's `composer.json`:
+If the package is available on [Packagist](https://packagist.org/packages/chuckbartowski/plesk-sdk):
+
+```bash
+composer require chuckbartowski/plesk-sdk
+```
+
+Otherwise, install it straight from the Git repository — add it as a VCS source in your project's `composer.json`:
 
 ```json
 {
@@ -68,10 +74,10 @@ The package is not published on Packagist yet — install it straight from the G
 }
 ```
 
-Then require the development branch:
+Then require it:
 
 ```bash
-composer require chuckbartowski/plesk-sdk:dev-main
+composer require chuckbartowski/plesk-sdk:^1.0
 ```
 
 ## Quick Start (plain PHP)
