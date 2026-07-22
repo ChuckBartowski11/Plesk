@@ -54,6 +54,7 @@ The CLI bridge makes every `plesk bin` utility callable over HTTPS — the SDK u
 - [Error Handling](#error-handling)
 - [Testing](#testing)
 - [Security Notes](#security-notes)
+- [WHMCS module](#whmcs-module)
 - [License](#license)
 
 ---
@@ -418,6 +419,24 @@ $plesk = new Plesk(new PleskClient('host', apiKey: 'key', httpClient: $http));
 - The CLI bridge runs commands **as root on the server** — treat any code path that reaches `cli()` with the same care as SSH access.
 - Leave `verify_ssl: true` in production; the option exists solely for self-signed panels.
 - `remove()` on domains, customers and databases is irreversible — gate destructive calls behind confirmation flows in your application.
+
+## WHMCS module
+
+A ready-to-use **WHMCS provisioning module** ships in [`whmcs/modules/servers/plesksdk/`](whmcs/modules/servers/plesksdk). It provisions Plesk subscriptions through this SDK — create a domain with hosting, suspend/unsuspend, terminate, and change the web-user password.
+
+**Install**
+
+1. `composer require chuckbartowski/plesk-sdk` in your WHMCS root.
+2. Copy the `plesksdk` folder into `<whmcs>/modules/servers/`.
+3. Add a server with **Type: Plesk (SDK)**, the Plesk hostname, and your **Plesk API key** in the *Access Hash* field (or username/password as fallback).
+4. Set the **Service Plan** config option to the Plesk plan name.
+
+| Operation | Plesk API |
+|---|---|
+| Create | REST `POST /domains` (virtual hosting) |
+| Suspend / Unsuspend | CLI `domain --off` / `--on` |
+| Terminate | CLI `domain --remove` |
+| Change password | CLI `site --update-web-user` |
 
 ## License
 
